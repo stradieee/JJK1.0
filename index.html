@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0a0b10">
+<title>JUJUTSU // Watch Guide</title>
+<style>
+:root{color-scheme:dark;--bg:#090a0f;--panel:#11131c;--panel2:#171a26;--line:#282c3d;--text:#f4f5fb;--muted:#a4a9bd;--red:#e63c54;--purple:#9d7bff;--green:#69e0b1}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 75% -10%,#31204b 0,transparent 35%),var(--bg);color:var(--text);font:15px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:inherit}.wrap{max-width:1280px;margin:auto;padding:0 26px}.top{height:76px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #ffffff12}.brand{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:.12em}.mark{width:36px;height:36px;border-radius:11px;background:linear-gradient(135deg,var(--red),#7a4be8);display:grid;place-items:center;font-size:18px;box-shadow:0 6px 25px #e63c5440}.brand small{display:block;font-size:10px;color:var(--muted);letter-spacing:.2em;font-weight:700}.nav{display:flex;gap:22px;color:var(--muted);font-size:13px}.nav a{text-decoration:none}.nav a:hover{color:white}.hero{padding:54px 0 30px;display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:center}.eyebrow{color:#ff7285;font-size:11px;font-weight:900;letter-spacing:.22em;text-transform:uppercase}.hero h1{font-size:clamp(36px,5.5vw,68px);line-height:.98;letter-spacing:-.055em;margin:14px 0 18px;max-width:700px}.hero h1 span{color:var(--red)}.hero p{color:var(--muted);max-width:620px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 17px;border:1px solid var(--line);border-radius:10px;background:var(--panel2);color:var(--text);font-weight:800;font-size:13px;text-decoration:none;cursor:pointer}.btn.primary{background:var(--red);border-color:var(--red);color:white}.btn:hover{filter:brightness(1.12)}.hero-card{min-height:260px;border:1px solid #ffffff1a;border-radius:20px;padding:26px;position:relative;overflow:hidden;background:linear-gradient(140deg,#26182c,#151725 55%,#0d111a)}.hero-card:after{content:"呪";position:absolute;right:-8px;bottom:-75px;font-size:270px;line-height:1;color:#ffffff08;font-weight:900}.hero-card h2{font-size:23px;margin:14px 0 8px;position:relative;z-index:1}.hero-card p,.hero-card .pill{position:relative;z-index:1}.pill{display:inline-block;border:1px solid #ffffff24;border-radius:99px;padding:5px 9px;font-size:10px;letter-spacing:.1em;color:#ddd}.stats{display:flex;gap:25px;margin-top:24px;position:relative;z-index:1}.stats strong{display:block;font-size:21px}.stats span{font-size:11px;color:var(--muted)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:24px 0 16px}.section-head h2{font-size:22px;margin:0;letter-spacing:-.03em}.section-head p{margin:3px 0 0;color:var(--muted);font-size:12px}.layout{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(280px,.8fr);gap:20px;align-items:start}.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}.player{aspect-ratio:16/9;background:#030407;display:grid;place-items:center;position:relative}.player video,.player iframe{width:100%;height:100%;border:0;background:#000}.player-empty{text-align:center;padding:30px;max-width:500px}.play-icon{width:60px;height:60px;border-radius:50%;display:grid;place-items:center;margin:0 auto 16px;background:#e63c5424;border:1px solid #e63c5480;color:#ff7385;font-size:25px}.player-empty h3{margin:0 0 7px}.player-empty p{font-size:12px;color:var(--muted)}.player-controls{padding:16px 18px;display:flex;justify-content:space-between;gap:15px;align-items:center}.player-controls h3{font-size:15px;margin:0}.player-controls p{margin:3px 0 0;color:var(--muted);font-size:11px}.small-btn{border:1px solid var(--line);background:#191c28;color:#fff;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:11px;font-weight:700}.side{padding:17px}.side h3{font-size:14px;margin:0 0 12px}.side p{font-size:12px;color:var(--muted)}.field{width:100%;background:#090b12;color:white;border:1px solid var(--line);padding:11px 12px;border-radius:9px;outline:none;font:inherit;font-size:12px}.field:focus{border-color:var(--purple)}.field-label{display:block;font-size:11px;color:#c0c4d3;font-weight:800;margin:12px 0 6px}.help{font-size:11px!important;line-height:1.5}.episodes-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.episodes-head .field{max-width:260px}.season-select{max-width:170px}.episode-list{display:grid;gap:8px;padding:12px}.episode{display:grid;grid-template-columns:58px 1fr auto;gap:12px;align-items:center;text-align:left;padding:10px;background:#151823;border:1px solid transparent;border-radius:11px;color:inherit;cursor:pointer;width:100%}.episode:hover,.episode.active{border-color:#e63c5480;background:#211820}.ep-num{width:58px;height:43px;display:grid;place-items:center;border-radius:7px;background:linear-gradient(135deg,#322037,#171a29);color:#ff8795;font-weight:900;font-size:12px}.ep-title{font-size:12px;font-weight:800}.ep-desc{font-size:10px;color:var(--muted);margin-top:3px}.ep-tag{font-size:9px;color:#b8a5ff;border:1px solid #9d7bff40;padding:4px 6px;border-radius:6px}.providers{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:42px}.provider{padding:17px;border:1px solid var(--line);background:var(--panel);border-radius:13px}.provider strong{display:block;font-size:13px}.provider p{color:var(--muted);font-size:11px;min-height:34px}.provider a{font-size:11px;color:#ff8392;font-weight:800;text-decoration:none}.notice{margin:18px 0 26px;padding:13px 15px;border:1px solid #d7a54a45;background:#d7a54a0b;color:#d6c6a4;border-radius:10px;font-size:11px}.footer{padding:24px 0 34px;color:#777e94;font-size:11px;border-top:1px solid #ffffff12;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.hidden{display:none!important}
+@media(max-width:800px){.wrap{padding:0 15px}.nav{gap:12px}.hero{grid-template-columns:1fr;padding-top:36px}.hero-card{min-height:220px}.layout{grid-template-columns:1fr}.providers{grid-template-columns:1fr}.section-head{align-items:start;flex-direction:column}.episodes-head{width:100%}.episodes-head .field{max-width:none;flex:1}.season-select{max-width:100%}.player-controls{align-items:start}.stats{gap:18px}}
+@media(max-width:430px){.nav a:nth-child(2){display:none}.brand{font-size:12px}.hero h1{font-size:40px}.episode{grid-template-columns:48px 1fr auto;gap:8px;padding:8px}.ep-num{width:48px;height:40px}.ep-tag{display:none}}
+</style>
+</head>
+<body>
+<header class="wrap top">
+  <div class="brand"><div class="mark">呪</div><div>JUJUTSU <span style="color:var(--red)">//</span> ARCHIVE<small>FAN WATCH GUIDE</small></div></div>
+  <nav class="nav"><a href="#episodes">Episodes</a><a href="#player">Player</a><a href="#official">Official platforms</a></nav>
+</header>
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <div class="eyebrow">Cursed energy detected · Anime guide</div>
+      <h1>ENTER THE WORLD OF <span>JUJUTSU KAISEN.</span></h1>
+      <p>A dark, anime-inspired watch hub to browse the series, track episodes, and play videos from sources you are authorized to use.</p>
+      <div class="actions"><a class="btn primary" href="#episodes">▶ Browse episodes</a><a class="btn" href="#official">Find official streams ↗</a></div>
+    </div>
+    <div class="hero-card">
+      <span class="pill">JUJUTSU KAISEN · WATCH GUIDE</span>
+      <h2>Every arc. One place.</h2>
+      <p>Choose an episode, then load a licensed video URL or continue on an official streaming service available in your region.</p>
+      <div class="stats"><div><strong>TV</strong><span>Series guide</span></div><div><strong>HD</strong><span>Player-ready</span></div><div><strong>Local</strong><span>Watch progress</span></div></div>
+    </div>
+  </section>
+
+  <div class="notice"><strong>Streaming note:</strong> This site does not host or provide unauthorized copies of copyrighted episodes. The built-in player plays a video URL you supply that you have permission to stream. Official catalog availability can vary by country and subscription.</div>
+
+  <section id="player">
+    <div class="section-head"><div><h2>Now playing</h2><p>Select an episode, or paste a licensed video/embed URL into the player setup.</p></div></div>
+    <div class="layout">
+      <div class="panel">
+        <div class="player" id="playerSurface">
+          <div class="player-empty" id="emptyState"><div class="play-icon">▶</div><h3>Your player is ready</h3><p>Select an episode from the guide, then use “Load stream” to play a licensed MP4/WebM URL or an embeddable player URL you are authorized to use.</p></div>
+        </div>
+        <div class="player-controls"><div><h3 id="nowTitle">No episode selected</h3><p id="nowMeta">Choose an episode from the list</p></div><button class="small-btn" id="clearPlayer">Clear player</button></div>
+      </div>
+      <aside class="panel side">
+        <h3>Player setup</h3>
+        <p>Use a direct video file URL (MP4/WebM) or a provider-approved embed URL. Some sites block embedding.</p>
+        <label class="field-label" for="streamUrl">Licensed stream / embed URL</label>
+        <input id="streamUrl" class="field" type="url" placeholder="https://example.com/your-authorized-video.mp4" autocomplete="url">
+        <button class="btn primary" id="loadStream" style="width:100%;margin-top:10px">Load stream</button>
+        <p class="help">Only use content you own, have licensed, or are explicitly allowed to embed. This page does not bypass DRM, logins, or regional restrictions.</p>
+      </aside>
+    </div>
+  </section>
+
+  <section id="episodes">
+    <div class="section-head"><div><h2>Episode guide</h2><p>Browse a starter episode index. Use official platforms for licensed playback.</p></div>
+      <div class="episodes-head"><input id="search" class="field" type="search" placeholder="Search episodes…" aria-label="Search episodes"><select id="season" class="field season-select" aria-label="Filter by season"><option value="all">All seasons</option><option value="1">Season 1</option><option value="2">Season 2</option><option value="movie">Movie</option></select></div>
+    </div>
+    <div class="panel"><div class="episode-list" id="episodeList"></div></div>
+  </section>
+
+  <section id="official">
+    <div class="section-head"><div><h2>Watch officially</h2><p>Open a provider and check current availability in your region.</p></div></div>
+    <div class="providers">
+      <div class="provider"><strong>Crunchyroll</strong><p>Anime streaming catalog; availability depends on region and plan.</p><a href="https://www.crunchyroll.com/" target="_blank" rel="noopener noreferrer">Open Crunchyroll ↗</a></div>
+      <div class="provider"><strong>Netflix</strong><p>Search the local catalog for Jujutsu Kaisen and available seasons.</p><a href="https://www.netflix.com/" target="_blank" rel="noopener noreferrer">Open Netflix ↗</a></div>
+      <div class="provider"><strong>JustWatch</strong><p>Check which legal services list the series in your country.</p><a href="https://www.justwatch.com/" target="_blank" rel="noopener noreferrer">Check availability ↗</a></div>
+    </div>
+  </section>
+  <footer class="footer"><span>JUJUTSU // ARCHIVE — Unofficial fan-made watch guide.</span><span>Not affiliated with the creators or rights holders.</span></footer>
+</main>
+<script>
+(() => {
+  'use strict';
+  const episodes = [
+    {season:1,num:1,title:'Ryomen Sukuna',desc:'Yuji Itadori enters the world of curses.'},
+    {season:1,num:2,title:'For Myself',desc:'Yuji meets the jujutsu world and its rules.'},
+    {season:1,num:3,title:'Girl of Steel',desc:'A new first-year joins the team.'},
+    {season:1,num:4,title:'Curse Womb Must Die',desc:'A dangerous mission begins.'},
+    {season:1,num:5,title:'Curse Womb Must Die – II',desc:'The mission takes a deadly turn.'},
+    {season:1,num:6,title:'After Rain',desc:'The aftermath changes Yuji’s path.'},
+    {season:1,num:7,title:'Assault',desc:'A powerful curse tests the sorcerers.'},
+    {season:1,num:8,title:'Boredom',desc:'Tensions rise between students.'},
+    {season:1,num:9,title:'Small Fry and Reverse Retribution',desc:'A case reveals a disturbing pattern.'},
+    {season:1,num:10,title:'Idle Transfiguration',desc:'A new threat begins to take shape.'},
+    {season:1,num:11,title:'Narrow-minded',desc:'The investigation continues.'},
+    {season:1,num:12,title:'To You, Someday',desc:'Yuji faces a painful turning point.'},
+    {season:1,num:13,title:'Tomorrow',desc:'The consequences of the mission unfold.'},
+    {season:1,num:14,title:'Kyoto Sister School Exchange Event – Group Battle 0',desc:'The schools meet for the exchange event.'},
+    {season:1,num:15,title:'Domain Expansion',desc:'The event escalates.'},
+    {season:1,num:16,title:' Kyoto Sister School Exchange Event – Group Battle 1',desc:'The teams clash.'},
+    {season:1,num:17,title:'Kyoto Sister School Exchange Event – Group Battle 2',desc:'The competition continues.'},
+    {season:1,num:18,title:'Sage',desc:'A powerful technique is revealed.'},
+    {season:1,num:19,title:'Black Flash',desc:'The battle reaches a new intensity.'},
+    {season:1,num:20,title:'Nonstandard',desc:'The students push beyond their limits.'},
+    {season:1,num:21,title:'Jujutsu Koshien',desc:'The event takes an unexpected turn.'},
+    {season:1,num:22,title:'The Origin of Blind Obedience',desc:'A new investigation begins.'},
+    {season:1,num:23,title:'The Origin of Blind Obedience – II',desc:'The mystery deepens.'},
+    {season:1,num:24,title:'Accomplices',desc:'Season one reaches its conclusion.'},
+    {season:2,num:1,title:'Hidden Inventory',desc:'A mission from Gojo and Geto’s past.'},
+    {season:2,num:2,title:'Hidden Inventory – II',desc:'The mission grows more dangerous.'},
+    {season:2,num:3,title:'Hidden Inventory – III',desc:'The past approaches a turning point.'},
+    {season:2,num:4,title:'Hidden Inventory – IV',desc:'The arc reaches its climax.'},
+    {season:2,num:5,title:'Premature Death',desc:'The story follows a consequential choice.'},
+    {season:2,num:6,title:'It’s Like That',desc:'The present-day story resumes.'},
+    {season:2,num:7,title:'Evening Festival',desc:'Plans come into motion.'},
+    {season:2,num:8,title:'The Shibuya Incident',desc:'Shibuya becomes the center of a crisis.'},
+    {season:2,num:9,title:'The Shibuya Incident – Gate, Open',desc:'The incident escalates.'},
+    {season:2,num:10,title:'Pandemonium',desc:'Sorcerers fight to contain the chaos.'},
+    {season:2,num:11,title:'Seance',desc:'A dangerous technique enters the battle.'},
+    {season:2,num:12,title:'Dull Knife',desc:'The conflict spreads through Shibuya.'},
+    {season:2,num:13,title:'Red Scale',desc:'A fierce confrontation unfolds.'},
+    {season:2,num:14,title:'Fluctuations',desc:'The battle continues across the city.'},
+    {season:2,num:15,title:'Fluctuations – II',desc:'New combatants enter the fray.'},
+    {season:2,num:16,title:'Thunderclap',desc:'A formidable opponent appears.'},
+    {season:2,num:17,title:'Thunderclap – II',desc:'The confrontation intensifies.'},
+    {season:2,num:18,title:'Right and Wrong',desc:'Yuji confronts the cost of the incident.'},
+    {season:2,num:19,title:'Right and Wrong – II',desc:'The aftermath becomes personal.'},
+    {season:2,num:20,title:'Right and Wrong – III',desc:'The struggle continues.'},
+    {season:2,num:21,title:'Transformation',desc:'The incident nears its conclusion.'},
+    {season:2,num:22,title:'The Shibuya Incident – Gate, Close',desc:'The arc reaches its final stages.'},
+    {season:2,num:23,title:'Shibuya Incident – Closing',desc:'The season closes on major consequences.'},
+    {season:'movie',num:0,title:'Jujutsu Kaisen 0',desc:'Prequel film featuring Yuta Okkotsu.'}
+  ];
+  const list = document.getElementById('episodeList');
+  const search = document.getElementById('search');
+  const season = document.getElementById('season');
+  const streamUrl = document.getElementById('streamUrl');
+  const playerSurface = document.getElementById('playerSurface');
+  let selected = null;
+  let activeVideo = null;
+  const progressKey = 'jjk-watch-progress-v1';
+  const loadProgress = () => { try { return JSON.parse(localStorage.getItem(progressKey) || '{}'); } catch { return {}; } };
+  const saveProgress = key => { try { const p = loadProgress(); p[key] = true; localStorage.setItem(progressKey, JSON.stringify(p)); } catch {} };
+  const keyFor = ep => `${ep.season}-${ep.num}`;
+  function render() {
+    const q = search.value.trim().toLowerCase();
+    const s = season.value;
+    const progress = loadProgress();
+    const filtered = episodes.filter(ep => (s === 'all' || String(ep.season) === s) && (`${ep.title} ${ep.desc} ${ep.season === 'movie' ? 'movie' : 'season ' + ep.season} episode ${ep.num}`.toLowerCase().includes(q)));
+    list.replaceChildren();
+    if (!filtered.length) { const empty = document.createElement('p'); empty.textContent = 'No episodes match your search.'; empty.style.cssText='padding:18px;color:#a4a9bd;font-size:12px'; list.append(empty); return; }
+    filtered.forEach(ep => {
+      const key = keyFor(ep);
+      const button = document.createElement('button');
+      button.className = 'episode' + (selected && keyFor(selected) === key ? ' active' : '');
+      button.type = 'button';
+      const num = document.createElement('div'); num.className='ep-num'; num.textContent = ep.season === 'movie' ? 'FILM' : `S${ep.season} · E${String(ep.num).padStart(2,'0')}`;
+      const info = document.createElement('div');
+      const title = document.createElement('div'); title.className='ep-title'; title.textContent=ep.title;
+      const desc = document.createElement('div'); desc.className='ep-desc'; desc.textContent=ep.desc;
+      info.append(title,desc);
+      const tag = document.createElement('span'); tag.className='ep-tag'; tag.textContent=progress[key] ? 'WATCHED' : 'SELECT';
+      button.append(num,info,tag);
+      button.addEventListener('click', () => selectEpisode(ep));
+      list.append(button);
+    });
+  }
+  function selectEpisode(ep) {
+    selected = ep;
+    document.getElementById('nowTitle').textContent = ep.title;
+    document.getElementById('nowMeta').textContent = ep.season === 'movie' ? 'Jujutsu Kaisen 0 · Movie' : `Season ${ep.season} · Episode ${ep.num}`;
+    streamUrl.value = '';
+    clearPlayer(false);
+    const empty = document.createElement('div'); empty.className='player-empty'; empty.id='emptyState';
+    const icon = document.createElement('div'); icon.className='play-icon'; icon.textContent='▶';
+    const h = document.createElement('h3'); h.textContent='Episode selected';
+    const p = document.createElement('p'); p.textContent='Load a licensed stream URL on the right, or open an official streaming service below.';
+    empty.append(icon,h,p); playerSurface.replaceChildren(empty);
+    render();
+    document.getElementById('player').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+  function clearPlayer(resetTitle=true) {
+    if (activeVideo) { try { activeVideo.pause(); } catch {} }
+    activeVideo = null;
+    playerSurface.replaceChildren();
+    const empty = document.createElement('div'); empty.className='player-empty';
+    const icon = document.createElement('div'); icon.className='play-icon'; icon.textContent='▶';
+    const h = document.createElement('h3'); h.textContent='Your player is ready';
+    const p = document.createElement('p'); p.textContent='Select an episode, then load a video URL you are authorized to stream.';
+    empty.append(icon,h,p); playerSurface.append(empty);
+    if (resetTitle) { document.getElementById('nowTitle').textContent='No episode selected'; document.getElementById('nowMeta').textContent='Choose an episode from the list'; }
+  }
+  function loadStream() {
+    const raw = streamUrl.value.trim();
+    if (!selected) { alert('Select an episode first.'); return; }
+    if (!raw) { alert('Paste a licensed video or provider-approved embed URL.'); streamUrl.focus(); return; }
+    let url;
+    try { url = new URL(raw); } catch { alert('Enter a valid URL beginning with https:// or http://.'); return; }
+    if (!['https:','http:'].includes(url.protocol)) { alert('Only HTTP(S) URLs are supported.'); return; }
+    clearPlayer(false);
+    if (/\.(mp4|webm|ogg)(\?.*)?$/i.test(url.pathname + url.search)) {
+      const video = document.createElement('video');
+      video.controls = true; video.autoplay = true; video.playsInline = true; video.preload = 'metadata';
+      video.src = url.href;
+      video.addEventListener('ended', () => { saveProgress(keyFor(selected)); render(); });
+      video.addEventListener('error', () => alert('The video could not be loaded. Check the URL, CORS/server settings, and whether the host permits playback.'));
+      playerSurface.append(video); activeVideo = video;
+      video.play().catch(() => {});
+    } else {
+      // Embed only provider URLs explicitly supplied by the user; browser/provider restrictions still apply.
+      const frame = document.createElement('iframe');
+      frame.src = url.href; frame.title = 'Authorized video player'; frame.allow = 'autoplay; fullscreen; picture-in-picture; encrypted-media'; frame.allowFullscreen = true;
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      playerSurface.append(frame);
+    }
+  }
+  search.addEventListener('input',render);
+  season.addEventListener('change',render);
+  document.getElementById('loadStream').addEventListener('click',loadStream);
+  document.getElementById('clearPlayer').addEventListener('click',() => clearPlayer());
+  render();
+})();
+</script>
+</body>
+</html>
